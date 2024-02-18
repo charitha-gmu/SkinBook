@@ -1,0 +1,16 @@
+//  import global styles
+@import "./App.css";
+
+// assets
+@import "./assets/styles/colors.scss";
+@import "./assets/styles/fonts.scss";
+@import "./assets/styles/common.scss";
+
+// components
+@import "./components/home/home.scss";
+@import "./components/navbar/navbar.scss";
+@import "./components/decode/decode.scss";
+@import "./components/remedies/remedies.scss";
+
+@import "./components/common/Button/button.scss";
+@import "./components/common/Modal/modal.scss";

@@ -1,0 +1,17 @@
+.outline-button {
+    width: 150px;
+    font-size: $font-size-l;
+    padding: 7.5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $theme;
+    color: $theme;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.outline-button:hover {
+    color: $white;
+    background-color: $theme;
+}

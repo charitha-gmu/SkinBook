@@ -1,0 +1,32 @@
+.modal-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: $light-gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background-color: transparent;
+  
+    .modal {
+      overflow-y: auto;
+      width: 75%;
+      height: 60%;
+      background: white;
+      border-radius: 6px;
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+      border: 5px solid $theme;
+    }
+    .confirmation-modal-body {
+      border-radius: 25px;
+    }
+  }
+  .dark-background {
+    background: $gray;
+  }
+  

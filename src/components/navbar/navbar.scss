@@ -1,0 +1,33 @@
+.nav-bar-container {
+    // height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom:  2px solid $theme;
+
+    .logo {
+        margin-top: 20px;
+        font-size: 48px;
+        color: $theme;
+        font-style: italic;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+        padding: 15px 0;
+        background-color: $theme;
+
+        .header-element {
+            font-size: $font-size-xl;
+            color: $white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+}
