@@ -8,10 +8,7 @@ import { RoutePaths } from "../../utils/routes";
 import { routines } from "../../utils/routines";
 
 const Remedies = () => {
-  localStorage.setItem(
-    "skinType",
-    JSON.stringify({ value: 50.3, key: "Acne" })
-  );
+
   const value = JSON.parse(localStorage.getItem("skinType"));
 
   const renderRoutineList = () => {
