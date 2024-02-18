@@ -3,7 +3,7 @@ import Modal from "../common/Modal";
 import ImageUploader from "./ImageUploader";
 
 const QuizModal = (props) => {
-  const [showNextForm, setShowNextForm] = useState(true);
+  const [showNextForm, setShowNextForm] = useState(false);
 
   const handleButtonSubmit = (e) => {
     e.preventDefault();
