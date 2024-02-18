@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Analysis</title>
+    <style>
+
+@font-face {
+            font-family: 'Canela-regular';
+            src: url('path-to-your-font/Canela-regular.woff2') format('woff2'),
+                 url('path-to-your-font/Canela-regular.woff') format('woff'),
+                 url('path-to-your-font/Canela-regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Canela-regular', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .selfie-container {
+            width: 45%;
+            position: relative;
+            
+        }
+        .selfie-container img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px #6f0f38;
+        }
+        .analysis-container {
+            width: 50%;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px #6f0f38;
+            font: Canela-regular;
+        }
+        .analysis-container h2 {
+            margin-bottom: 20px;
+            font-family: 'Canela-regular', serif;
+            
+        }
+        .attribute {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .attribute span {
+            display: inline-block;
+            min-width: 70px;
+        }
+        .routine-button {
+            background: #6f9bc9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            display: block;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .continue-button {
+            background: #6f0f38;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            display: block;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="selfie-container">
+        <img src="{{ image_data }}" alt="Selfie">
+    </div>
+
+    <div class="analysis-container">
+        <h2>SkinBook Report</h2>
+        {% for category, probability in probabilities.items() %}
+            <div class="attribute">
+                <span>{{ category }}</span>
+                <span>{{ probability }}</span>
+            </div>
+        {% endfor %}
+        <a href="/" class="routine-button">Try another image</a>
+        <a href="" class="continue-button">Continue for Ingredients</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skin Analysis</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  .selfie-container {
+    width: 45%;
+    position: relative;
+  }
+  .selfie-container img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .retake-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background: #f8f9fa;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .analysis-container {
+    width: 50%;
+  }
+  .analysis-container h2 {
+    margin-bottom: 20px;
+  }
+  .attribute {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .attribute .score {
+    font-weight: bold;
+  }
+  .attribute .status {
+    margin-left: 10px;
+    color: #28a745; /* Green for looks good */
+    color: #dc3545; /* Red for needs help */
+  }
+  .routine-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="selfie-container">
+    <button class="retake-button">RETAKE SELFIE</button>
+    <img src="path-to-selfie.jpg" alt="Selfie">
+  </div>
+
+  <div class="analysis-container">
+    <h2>Selfie Analysis</h2>
+    <div class="attribute">
+      <span>Redness</span>
+      <span class="score">24</span>
+      <span class="status">LOOKS GOOD</span>
+    </div>
+    <!-- Repeat for other attributes -->
+    <a href="#" class="routine-button">See Your Routine</a>
+  </div>
+</div>
+
+</body>
+</html>

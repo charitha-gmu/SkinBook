@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Camera Feed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .video-container {
+            position: relative;
+            text-align: center;
+        }
+        #video {
+            border-radius: 8px;
+        }
+        #capture {
+            position: absolute;
+            bottom: -35px; /* Half of the button's height to ensure it's centered at the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+            background: #6f0f38;
+            color: white;
+            border: none;
+            padding: 10px 100px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="video-container">
+    <h2>Lets Take a Picture</h2>
+    <video id="video" width="640" height="480" autoplay></video>
+    <button id="capture">Capture</button>
+</div>
+<form id="imageForm" action="/predict" method="POST">
+    <input type="hidden" name="image" id="imageData">
+</form>
+
+<script>
+    // Access the user's webcam
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+            var video = document.getElementById('video');
+            video.srcObject = stream;
+            video.play();
+        })
+        .catch(function(err) {
+            console.log("An error occurred: " + err);
+        });
+
+    document.getElementById('capture').addEventListener('click', function() {
+        var video = document.getElementById('video');
+        var canvas = document.createElement('canvas');
+        canvas.width = 640;
+        canvas.height = 480;
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        var dataURL = canvas.toDataURL('image/png');
+        document.getElementById('imageData').value = dataURL;
+        document.getElementById('imageForm').submit(); // Automatically submit the form after capture
+    });
+</script>
+
+</body>
+</html>
