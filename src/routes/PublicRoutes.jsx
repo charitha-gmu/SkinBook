@@ -18,7 +18,7 @@ const PublicRoutes = () => {
 
   return (
     <>
-      <Router>
+      <Router basename="/SkinBook">
         <Suspense fallback={<div>Loading...</div>}>
           {/* Add a fallback here */}
           <Navbar />
