@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhackfax=self.webpackChunkhackfax||[]).push([[518],{518:(a,e,n)=>{n.r(e),n.d(e,{default:()=>s});n(43);var c=n(579);const s=()=>(0,c.jsx)("div",{className:"not-found-container",children:"Page not found"})}}]);
+//# sourceMappingURL=518.58c54caa.chunk.js.map
