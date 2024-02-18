@@ -58,7 +58,7 @@ const ImageUploader = () => {
       : await toBase64(selectedFile);
 
     // Replace the URL with the actual URL of your Flask API
-    fetch("https://212b-100-36-180-3.ngrok-free.app/predict", {
+    fetch("https://ed55-100-36-180-3.ngrok-free.app/predict", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
