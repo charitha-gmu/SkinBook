@@ -5,9 +5,36 @@ import { youTubeLinks } from "../../utils/remediesYouTubeLinks";
 import { mapping } from "../../utils/mapping";
 import { NavLink } from "react-router-dom";
 import { RoutePaths } from "../../utils/routes";
+import { routines } from "../../utils/routines";
 
 const Remedies = () => {
+  localStorage.setItem(
+    "skinType",
+    JSON.stringify({ value: 50.3, key: "Acne" })
+  );
   const value = JSON.parse(localStorage.getItem("skinType"));
+
+  const renderRoutineList = () => {
+    const listObj = routines?.[mapping[value?.key]];
+
+    const data = [];
+
+    for (const [key, value] of Object.entries(listObj)) {
+      data.push(
+        <>
+          <div className="sub-heading">{key}</div>
+          <ul>
+          {value?.map((ele) => (
+            <li className="list-element">{ele}</li>
+          ))}
+          </ul>
+        </>
+      );
+    }
+
+    return data
+  };
+
   return (
     <div className="remedies-container">
       <div>
@@ -19,15 +46,19 @@ const Remedies = () => {
                 return <RemedyCard data={remedy} id={remedy?.title + index} />;
               })}
             </div>
+
+            <div>
+              <div className="routine-header">Suggested Daily Routine</div>
+              {renderRoutineList()}
+            </div>
           </>
         ) : (
           <>
             <div className="header-text-in-remedies">
               <span>Get your personalized remedies by</span>
-              <NavLink
-                to={RoutePaths.decode}
-                className="decode-nav-link"
-              >Decoding your Skin</NavLink>
+              <NavLink to={RoutePaths.decode} className="decode-nav-link">
+                Decoding your Skin
+              </NavLink>
             </div>
             <div className="remedy-cards-container">
               {youTubeLinks?.map((link, index) => {

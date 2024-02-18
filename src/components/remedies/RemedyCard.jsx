@@ -3,7 +3,7 @@ import OutlinedButton from "../common/Button";
 
 const RemedyCard = (props) => {
   const { data } = props;
-  console.log(data);
+
   return (
     <div className="remedy-card">
       <p className="sub-header">{data?.title}</p>

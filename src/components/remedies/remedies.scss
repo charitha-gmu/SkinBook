@@ -30,6 +30,24 @@
             font-style: italic;
         }
     }
+
+    .routine-header{
+        margin: 25px 0;
+        font-size: 38px;
+        font-style: italic;
+        color: $theme;
+    }
+
+    .sub-heading{
+        margin: 15px 0;
+        font-size: 24px;
+        color: $theme;
+        text-transform: capitalize;
+    }
+
+    li:last-child{
+        margin-bottom: 25px;
+    }
 }
 
 .remedy-cards-container {
