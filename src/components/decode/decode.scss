@@ -6,22 +6,37 @@
     justify-content: space-around;
     align-items: center;
 
+    @media (max-width: 1080px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .image-container {
         height: 75%;
         width: calc(50% - 50px);
         flex: 1;
         display: flex;
-       align-items: center;
-       margin-right: 25px;
+        align-items: center;
+        margin-right: 25px;
+
+        @media (max-width: 1080px) {
+            width: calc(100% - 50px);
+            margin-top: 25px;
+        }
 
         .image {
-           width: calc(50%);
+            width: calc(50%);
         }
-        .face-image{
+        .face-image {
             height: 300px;
             width: 450px;
+
+            @media (max-width: 1080px) {
+                height: 200px;
+                width: 300px;
+            }
         }
-       
     }
 
     .text-container {
@@ -43,21 +58,32 @@
             font-size: 38px;
             font-style: italic;
             color: $theme;
+
+            @media (max-width: 1080px) {
+                font-size: 28px;
+            }
         }
 
         .content {
             margin: 5px 0;
             font-size: 16px;
 
-            span{
+            span {
                 color: $theme;
                 font-size: 18px;
+                @media (max-width: 1080px) {
+                    font-size: 16px;
+                }
+            }
+
+            @media (max-width: 1080px) {
+                font-size: 14px;
             }
         }
 
         .decode-nav-link {
             text-decoration: none;
-            
+
             .analysis-button {
                 width: 160px;
                 padding-left: 5px;
@@ -67,11 +93,11 @@
     }
 }
 
-.quiz-modal-container{
+.quiz-modal-container {
     padding: 25px 50px;
     position: relative;
 
-    .header{
+    .header {
         text-align: center;
         font-size: 30px;
         font-style: italic;
@@ -79,7 +105,7 @@
         margin-bottom: 20px;
     }
 
-    .close-btn{
+    .close-btn {
         position: absolute;
         right: 20px;
         top: 10px;
@@ -90,7 +116,7 @@
     .form-group {
         margin: 10px 0;
     }
-   
+
     .btn-submit {
         display: block;
         width: 50%;
@@ -110,7 +136,7 @@
 
     .environment-info {
         background-color: #e7f5ff;
-        border-left: 5px solid #2196F3;
+        border-left: 5px solid #2196f3;
         padding: 10px;
         margin-bottom: 20px;
         font-size: 14px;

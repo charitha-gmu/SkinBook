@@ -17,9 +17,17 @@
         margin-top: 25px;
         font-size: 48px;
 
+        @media (max-width: 1080px) {
+            font-size: 20px;
+        }
+
         span{
             padding-right: 5px;
             font-size: 24px;
+
+            @media (max-width: 1080px) {
+                font-size: 18px;
+            }
         }
 
         a{
@@ -28,6 +36,10 @@
             color: $theme;
             cursor: pointer;
             font-style: italic;
+
+            @media (max-width: 1080px) {
+                font-size: 24px;
+            }
         }
     }
 
@@ -67,6 +79,11 @@
         padding: 15px;
         width: 500px;
         margin: 25px;
+
+        @media (max-width: 1080px) {
+            width: calc(100% - 20px);
+            margin: 10px;
+        }
 
         border: 2px solid $theme;
 
