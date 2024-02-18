@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { RoutePaths } from "../../utils/routes";
+import { Logo } from "../../assets/images";
 
 const NavlinkList = [
   { title: "Home", path: RoutePaths.home },
@@ -13,7 +14,10 @@ const NavlinkList = [
 const NavBar = () => {
   return (
     <div className="nav-bar-container">
-      <div className="logo">Skin Book</div>
+      <div className="logo-container">
+        <img src={Logo} className="logo-img" alt="logo"></img>
+      <div className="logo">SkinBook</div>
+      </div>
       <div className="header-container">
 
         {NavlinkList.map((ele, index) => {

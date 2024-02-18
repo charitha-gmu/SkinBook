@@ -12,12 +12,31 @@
         font-style: italic;
         color: $theme;
     }
+
+    .header-text-in-remedies{
+        margin-top: 25px;
+        font-size: 48px;
+
+        span{
+            padding-right: 5px;
+            font-size: 24px;
+        }
+
+        a{
+            font-size: 30px;
+            text-decoration: underline;
+            color: $theme;
+            cursor: pointer;
+            font-style: italic;
+        }
+    }
 }
 
 .remedy-cards-container {
     padding: 25px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 
     .iframe-card{
         margin: 25px;

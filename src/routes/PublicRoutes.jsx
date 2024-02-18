@@ -9,7 +9,7 @@ const HomeComponent = lazy(() => import("../components/home"));
 const DecodeComponent = lazy(() => import("../components/decode"));
 const RemedyComponent = lazy(() => import("../components/remedies"));
 const NotFoundComponent = lazy(() => import("../components/PageNotFound"));
-// const PropertyDetails = lazy(() => import("../components/PropertyDetails"));
+const ImpactDetails = lazy(() => import("../components/impact"));
 // const PropertyForms = lazy(() => import("../components/PropertyForms"));
 // const PropertyLists = lazy(() => import("../components/PropertyLists"));
 
@@ -30,10 +30,10 @@ const PublicRoutes = () => {
             path={RoutePaths.remedies}
             element={<RemedyComponent />}
           />
-          {/* <Route
-            path={RoutePaths.addPropertyForm}
-            element={<PropertyForms />}
-          /> */}
+          <Route
+            path={RoutePaths.impact}
+            element={<ImpactDetails />}
+          />
           {/* <Route path={RoutePaths.propertyLists} element={<PropertyLists />} /> */}
           <Route path="*" element={<NotFoundComponent />} />
 

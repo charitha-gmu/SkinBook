@@ -5,13 +5,23 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    border-bottom:  2px solid $theme;
+    border-bottom: 2px solid $theme;
 
-    .logo {
-        margin-top: 20px;
-        font-size: 48px;
-        color: $theme;
-        font-style: italic;
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 15px;
+
+        .logo-img{
+            height: 50px;
+            width: 50px;
+        }
+        .logo {
+            font-size: 48px;
+            color: $theme;
+            font-style: italic;
+        }
     }
 
     .header-container {
